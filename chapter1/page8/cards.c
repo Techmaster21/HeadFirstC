@@ -1,5 +1,10 @@
-#include <stdio.h> /**/
-#include <stdlib.h> /**/
+/* 
+ * Program to evaluate face values.
+ * Released under the Vegas Public License
+ * (c)2014 The college Blackjack Team.
+ */
+#include <stdio.h>
+#include <stdlib.h>
 int main()
 {
 	char card_name[3];
@@ -17,11 +22,6 @@ int main()
 	} else {
 		val = atoi(card_name);
 	}
-	/* Check if the value is 3 to 6 */
-	if ((val > 2) && (val < 7))
-		puts("Count has gone up");
-	/* Otherwise check if the card was 10, J, Q or K */
-	else if (val == 10)
-		puts("Count has gone down");
+	printf("The card value is: %i\n", val);
 	return 0;
 }
