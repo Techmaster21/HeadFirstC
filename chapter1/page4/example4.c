@@ -1,6 +1,6 @@
-#include <stdio.h> /**/
-void main() /**/ 
-{ /**/
+#include <stdio.h>
+void main()
+{
 	char suit = 'H';
 	switch(suit) {
 	case 'C':
@@ -15,4 +15,4 @@ void main() /**/
 	default:
 		puts("Spades");
 	}
-} /**/
+}
