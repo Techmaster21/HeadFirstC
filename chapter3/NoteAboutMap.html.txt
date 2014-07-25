@@ -1,0 +1,9 @@
+Need to convert to googlemaps javascript API v3 if you want it to work
+
+Updated API calls to new names, initializes all markers and centers on the center one.
+
+Still need to test on multiple browsers and OS tho
+
+and with other json files
+
+and with a corrupt json file(where lat/lon is wrong)
