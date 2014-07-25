@@ -30,7 +30,7 @@ h3 {margin-height: 0px; padding-height: 0px;}
       function createMarker(point, label, html) {
       var mark1 = new google.maps.Marker({
 		position: point,
-		draggable: true,
+		draggable: false,
 		map: map
 		});
 	var infowindow = new google.maps.InfoWindow({
@@ -82,7 +82,7 @@ h3 {margin-height: 0px; padding-height: 0px;}
                         function loadData(url) {
                             var points = data;
 			map.center = new google.maps.LatLng(points[Math.round(points.length/2)].latitude,points[Math.round(points.length/2)].longitude);
-			map.zoom = 16;
+			map.zoom = 6;
                             for (var i = 0; i < points.length; i++) {
                                 setAMarker(points[i]);
                             }
@@ -107,7 +107,7 @@ h3 {margin-height: 0px; padding-height: 0px;}
                         function(point) {
                         if (point) {
                         map.center = new google.maps.LatLng(point.latitude, point.longitude);
-                        map.zoom = 13;
+                        map.zoom = 6;
                         onMapMove();
                         }
                         }
