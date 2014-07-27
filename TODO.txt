@@ -1,0 +1,5 @@
+Test map.html on Mac OSX and IE and other browsers(Including error handling like 
+invalid latitude)
+
+test makefile and launch program(Esp bc unistd.h and sleep() function) on 
+Windows and Mac OSX
