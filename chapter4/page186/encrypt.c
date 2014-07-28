@@ -1,5 +1,5 @@
 /******************************************************************************
- * [ADDED COMMENT] Note that the book included the line #include "encrypt.h"
+ * [ADDED] Note that the book included the line #include "encrypt.h"
  * here. It has been removed because it is not necessary in this case. Nothing 
  * within encrypt.c had to be made aware of the existence of the encrypt 
  * function (For indeed, that is the only function in the file). 

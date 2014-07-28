@@ -4,7 +4,7 @@ float total = 0.0;
 short count = 0;
 short tax_percent = 6;
 
-float add_with_tax(float f) /* [ADDED COMMENT] Book has a ; ending
+float add_with_tax(float f) /* [ADDED] Book has a ; ending
                              * this line, an error ('Twouldn't compile) */
 {
 	float tax_rate = 1 + tax_percent / 100.0;

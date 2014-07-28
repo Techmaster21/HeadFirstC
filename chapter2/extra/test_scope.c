@@ -1,4 +1,4 @@
-/*[ADDED COMMENTS] This code does not exist in the book, thus for clarity I
+/*[ADDEDS] This code does not exist in the book, thus for clarity I
  * will explain its function (Comments explain preceeding code)
  */
 

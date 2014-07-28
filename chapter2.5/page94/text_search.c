@@ -1,4 +1,4 @@
-/* [ADDED COMMENT] The original code in the book does not work properly because
+/* [ADDED] The original code in the book does not work properly because
  * fgets writes the trailing newline('\n') to the variable, and so strstr,
  * instead of trying to find your input in tracks[i], it tries to find your
  * input + \n which it will never find because we included no '\n's in the

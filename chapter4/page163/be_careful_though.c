@@ -7,7 +7,7 @@ int main()
 	printf("The value of y = %hi\n", y);
 }
 
-/* [ADDED COMMENT] Extended Geek Bits: Specifically the reason why it displays
+/* [ADDED] Extended Geek Bits: Specifically the reason why it displays
  * -31072 is because computers use a system called two's compliment to represent 
  * negative numbers in binary while making all arithmetic automagically work 
  * without having to add extra rules(Like subtraction). To put a binary number 
