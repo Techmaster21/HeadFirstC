@@ -1,0 +1,9 @@
+Mac OSX Mavericks(maybe others) seems to have issues properly running geo2json, 
+picking up carriage returns where there should be none. The original Mac OS used 
+carriage returns instead of new lines, but for the same purpose as 
+newlines(According to my research). However, these appear to be acting as 
+carriage return should: returning to the beginning of the line without moving 
+down. The result is madness. Fix unknown. Problem does not seem to reside in 
+spooky.csv. Recommend full test on Mac OSX and Windows(Maybe even another, more 
+common Linux distro(like Ubuntu)), and of course, discovering how to fix without 
+jeopardizing other OS or making the user change the code for OS.

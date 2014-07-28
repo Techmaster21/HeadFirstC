@@ -8,7 +8,7 @@ instead of minGW as the book recommends. In truth, TDM-GCC is more of a wrapper
 for minGW, but an up-to date, much easier to install one. It sets up your path 
 variable for you so you can run gcc(and others) from anywhere in the OS.
 
-Some issues you may encounter running natively(ie not via a cygwin tty) on 
+Some issues you may encounter running natively(i.e. not via a cygwin tty) on 
 Windows(This list is by no means complete):
 Redirecting standard input works differently, and you will find windows won't 
 let you simply use < to redirect the standard input. If you have access to 
