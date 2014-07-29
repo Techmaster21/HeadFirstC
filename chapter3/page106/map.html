@@ -10,6 +10,10 @@ h3 {margin-height: 0px; padding-height: 0px;}
 </style>
     <style type="text/css">
       html, body, #map { height: 100%; margin: 0; }
+      #force_info_window{
+	min-width:150px;
+	min-height:36px;
+	}
     </style>
     <script
       src="https://maps.googleapis.com/maps/api/js?libraries=drawing&sensor=false"
@@ -34,7 +38,7 @@ h3 {margin-height: 0px; padding-height: 0px;}
 		map: map
 		});
 	var infowindow = new google.maps.InfoWindow({
-		content: "<div align='left'><strong>" + label + "</strong><br/>" + html + "</div>"
+		content: "<div align='left' id='force_info_window'><strong>" + label + "</strong><br/>" + html + "</div>"
 		});
       //mark1.bouncy = true;
       google.maps.event.addListener(mark1, "click",
