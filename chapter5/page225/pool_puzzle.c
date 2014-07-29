@@ -6,6 +6,10 @@ struct fish {
 	int teeth;
 	int age;
 };
+/* [ADDED] Note that the struct type fish must be located outside of any 
+ * function so that the functions that call it can all be aware of the 
+ * structure.
+ */ 
 void label(struct fish f);
 void catalog(struct fish f);
 

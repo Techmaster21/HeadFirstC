@@ -7,3 +7,8 @@ down. The result is madness. Fix unknown. Problem does not seem to reside in
 spooky.csv. Recommend full test on Mac OSX and Windows(Maybe even another, more 
 common Linux distro(like Ubuntu)), and of course, discovering how to fix without 
 jeopardizing other OS or making the user change the code for OS.
+
+
+The issue was related to you copying the files from a windows machine. When you 
+got it straight from github, there were no issues. Still recommend full test on 
+all three OS when finished.

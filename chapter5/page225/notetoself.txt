@@ -1,3 +1,0 @@
-include info about structs having to be declared outside of functions if any 
-other function wishes to access them. NOT the struct variables themselves but 
-the struct types or whatever the heck they're called.

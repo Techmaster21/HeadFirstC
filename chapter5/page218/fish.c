@@ -10,18 +10,20 @@ int main()
 	return 0;
 }
 
+/* Print out the catalog entry */
 void catalog(const char* name, const char* species, int teeth, int age)
 {
 	printf("%s is a %s with %i teeth. He is %i\n",
 	        name, species, teeth, age);
-	/* Notice the above lists in order, name, species, teeth, age, while the 
-	 * below lists name, species, age, teeth, yet the variable order remains 
+	/* [ADDED] Notice the above lists in order, name, species, teeth, age, while 
+	 * the below lists name, species, age, teeth, yet the variable order remains
 	 * unchanged in the book, causing a contradiction. On the next page, they 
 	 * qualify that his age is 4 and his number of teeth 69. I have changed the 
 	 * order of the second printf to reflect this.
 	 */
 }
 
+/* Print the label for the tank */
 void label(const char* name, const char* species, int teeth, int age)
 {
 	printf("Name:%s\nSpecies:%s\n%i years old, %i teeth\n",
