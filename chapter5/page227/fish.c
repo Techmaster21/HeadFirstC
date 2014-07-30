@@ -25,7 +25,7 @@ void catalog(struct fish f);
 
 int main()
 {
-	/* [ADDED] Also note: struct types (such as 'fish') do not appear to 
+	/* [ADDED] Also note: struct names (such as 'fish') do not appear to 
 	 * conflict with local variables, i.e. I can have an integer variable called 
 	 * fish apparently without issue. Same with variables inside structs, such 
 	 * as 'name'. Specific instances of structs (e.g. 'snappy') do conflict.
