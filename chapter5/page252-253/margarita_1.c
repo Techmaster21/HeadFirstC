@@ -26,4 +26,10 @@ int main()
 	 */
 	printf("%2.1f measures of tequila\n%2.1f measures of cointreau\n%2.1f " 
 	       "measures of juice\n", m.tequila, m.cointreau, m.citrus.lemon);
+	/* [ADDED] Having two strings without a ; between them as above simply tells 
+	 * the compiler to concatenate (join together) the strings. This was done in
+	 * this instance to abide by the 80-column rule - a coding convention that 
+	 * you don't have to follow, but if you are going to have multiple people on 
+	 * multiple different kinds of computers, it would be nice to do.
+	 */ 
 }
