@@ -1,7 +1,3 @@
- Q: If the <tt>island</tt> struct had a name '''array''' rather than a character pointer, would we need to use strdup() here?
- A: No. Each island <tt>struct</tt> would store it's own copy, so you wouldn't need to make your own copy.
- Q: So why would I want to use char pointers rather than char arrays in my data structures?
- A: Char pointers won't limit the amount of space you need to set aside for strings. If you use char arrays, you will need to decide in advance exactly how long your strings might need to be.
  const int NUM_ADS = 7;
  char* ADS[] = {
    "William: SBM GSOH likes sports, TV, dining",
