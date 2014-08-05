@@ -1,0 +1,16 @@
+I (Adrian Bolt aka Techmaster21, the one who took it upon himself to fix these 
+source code samples) use tabs to indent code. The author of this book seems to 
+use spaces. It is mostly a matter of personal preference. I do use spaces for 
+alignment however, and doing so is necessary to ensure your code does not become 
+unreadable on a machine that uses a different tab size than yours. I will 
+demonstrate.
+
+int main()
+{
+	printf("Foo %s",
+	        bar);
+}
+Notice that I indented the line "bar);" with one tab, then used spaces to align 
+it. This is imperative. If you use more tabs than is required to align it with 
+the line it is a part of, your code will become unreadable on a system with a 
+different tab size.
