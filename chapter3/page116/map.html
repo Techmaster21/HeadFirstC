@@ -1,13 +1,9 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Geo-locater</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
 		<meta name = "viewport" content = "width = device-width" />
-		<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
-		<style>
-			h1,h2,h3 { font-family: 'Reenie Beanie', arial, serif; }
-			h3 { font-size: 24pt;}
-			h3 {margin-height: 0px; padding-height: 0px;}
-		</style>
+		<title>Geo-locater</title>
 		<style type="text/css">
 			html, body, #map { height: 100%; margin: 0; }
 			#force_info_window{
@@ -16,45 +12,30 @@
 			}
 		</style>
 		<script
-		src="https://maps.googleapis.com/maps/api/js?libraries=drawing&sensor=false"
-		type="text/javascript"></script>
+			src="https://maps.googleapis.com/maps/api/js?libraries=drawing&amp;sensor=false"
+			type="text/javascript">
+		</script>
 		<script src="output.json" type="text/javascript"></script>
-		<!--
-			<script
-			src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAhe6A1R99SP0ZrzrGWvxAGhQ-HP9w2GiAj3fY8FJaHBdkABCGxxQUUoGVdJQVwot2UGMiBOnQQAatCA"
-			type="text/javascript"></script>
-		-->
 		<script type="text/javascript">
-		var map_location = new google.maps.LatLng(0, 0);
 		var marker;
 		var map;
 		var markers = [];
-		var oldest_marker = 1;
-		var max_markers = 100;
 
 		function createMarker(point, label, html) {
 			var mark1 = new google.maps.Marker({
 				position: point,
-				draggable: false,
 				map: map
 			});
 			var infowindow = new google.maps.InfoWindow({
 				content: "<div align='left' id='force_info_window'><strong>" + label + "</strong><br/>" + html + "</div>"
 			});
-			//mark1.bouncy = true;
 			google.maps.event.addListener(mark1, "click",
 				function() {
-					map_location = mark1.position;
-					map.panTo(map_location);
-					var a = "";
+					map.panTo(mark1.position);
 					infowindow.open(map, mark1);
 				}
 			);
 			return mark1;
-		}
-
-		function textFor(element, tag) {
-			return element.getElementsByTagName(tag)[0].firstChild.nodeValue;
 		}
 
 		function setAMarker(point) {
@@ -77,11 +58,6 @@
 				point = new google.maps.LatLng(lat, lng);
 				var marker = createMarker(point,label,html);
 				marker.setMap(map);
-				var next_marker = oldest_marker - 1;
-				if (next_marker < 0) {
-					next_marker = max_markers - 1;
-				}
-				markers[next_marker] = marker;
 			}
 		}
 
@@ -94,31 +70,14 @@
 			}
 		}
 
-		var last_request = 0;
 		var dataFile;
 
 		function initialize() {
 			map = new google.maps.Map(document.getElementById("map"), {
-				center: map_location,
+				center: new google.maps.LatLng(0,0),
 				zoom: 2,
 				mapTypeId: google.maps.MapTypeId.HYBRID
 			});
-			var orig_query  = window.location.search;
-			if ((orig_query != null) && (orig_query.length > 0)) {
-				orig_query = orig_query.substring(1);
-				query = unescape(orig_query);
-				var geocoder = new google.maps.Geocoder();
-				geocoder.getLatLng(
-					query,
-					function(point) {
-						if (point) {
-							map.center = new google.maps.LatLng(point.latitude, point.longitude);
-							map.zoom = 13; //I don't think this does anything but I'm afraid to remove it.
-							onMapMove();
-						}
-					}
-				);
-			}
 			loadData(dataFile);
 		}
 
