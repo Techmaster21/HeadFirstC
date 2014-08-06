@@ -6,16 +6,11 @@ so.
 Valgrind does not provide any version that works on windows. However, there are 
 of course, a couple of options.
 
-The simplest and recomended:
+The simplest and recommended:
 Run an Ubuntu virtual machine using Virtualbox and type this into the terminal:
 sudo apt-get install valgrind
 If you are using another Linux distro, look at its documentation to discover how 
 to work its package manager.
 
-The still not too bad way:
-Using cygwin,
-
-The long way:
-
-
-
+The long and convoluted and possibly outdated by the time you read this way:
+http://sourceforge.net/projects/valgrind4win/
