@@ -1,5 +1,5 @@
 #include <stdio.h>
-void main()
+int main()
 {
 	char suit = 'H';
 	switch(suit) {
@@ -15,4 +15,5 @@ void main()
 	default:
 		puts("Spades");
 	}
+	return 0;
 }

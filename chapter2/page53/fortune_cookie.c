@@ -10,4 +10,6 @@ int main()
 {
 	char quote[] = "Cookies make you fat";
 	fortune_cookie(quote);
+
+	return 0;
 }

@@ -6,3 +6,10 @@ should
 test makefile and launch program(Esp bc unistd.h and sleep() function) on 
 Windows and Mac OSX
 ^Works with windows with TDM-GCC, yet to test on Mac
+
+Make sure all chapters are C90 compatible or if a specific program isnt, mention 
+it in C90-Compatibility.txt. If a chapter is not mentioned in that file, it has 
+yet to be checked.
+
+80-Column rule should be abided by assuming width 8 tabs? But you're using 4. 
+Many would not abide by 80 column rule if so. ? Be sure to decide before release

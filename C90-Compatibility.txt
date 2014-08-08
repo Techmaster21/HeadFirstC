@@ -1,0 +1,23 @@
+Also known as ANSI C. This file will list all programs(Not including those which 
+aren't supposed to compile of course) which do not strictly conform(They may or 
+may not compile) to ANSI C89/90 commonly known simply as ANSI C.
+
+---Chapter1
+--page8
+--page20
+--page28
+--page37
+-Do not strictly conform due to mixed variable declarations and code. Simple 
+-fix is to simply move int val = 0; to the beginning of the function.
+---Chapter2
+-Some issues with %p technically expecting a void *, explained in source of the 
+-first time the issue occurs, but that isn't really C90 specific.
+---Chapter3
+--page144-145/categorize.c
+-Mixed declarations with code. Just move the FILE declarations to the beginning 
+-of the function.
+--page152-153
+-Compiling with standard c90 causes an error because it doesn't include the gnu 
+-extensions which allow POSIX macros to be defined in features.h and which in 
+-turn allow unistd.h to include getopt.h. To fix this, either compile with 
+- -std=gnu90 which is C90 with GNU extensions or #include <getopt.h> manually.

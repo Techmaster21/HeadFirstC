@@ -1,4 +1,3 @@
-																																																																																																																																																																																						
  printf("%i bottles of beer on the wall, %i bottles of beer\n", 99, 99);
  printf("Take one down and pass it around, ");
  printf("%i bottles of beer on the wall\n", 98);

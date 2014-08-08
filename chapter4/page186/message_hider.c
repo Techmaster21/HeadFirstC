@@ -8,4 +8,6 @@ int main()
 		encrypt(msg);
 		printf("%s", msg);
 	}
+
+	return 0;
 }
