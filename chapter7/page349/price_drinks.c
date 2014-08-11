@@ -34,8 +34,8 @@ double total(int args, ...)
 		 * too many parenthesis for you. Even still, I would declare enum drink 
 		 * d outside of the loop. I don't think it affects the resulting code, 
 		 * but to me it just seems like bad practice. Again though, all personal
-		 * preference really (Although it does reduce the executable size by 8 
-		 * bytes haha)
+		 * preference really, It doesn't affect the compiled code at all, at 
+		 * least not in gcc 
 		 */
 	}
 	va_end(ap);

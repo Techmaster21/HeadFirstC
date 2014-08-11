@@ -3,11 +3,14 @@ This book was mainly written using a Unix based OS - which Windows is not. Thus
 while going through this book you are likely to encounter issues at some point 
 or another.
 
-The recommended solution is to download VirtualBox and run Ubuntu or a linux 
-distro of your choice inside a virtual machine.
+The recommended solution is to download VirtualBox and run Ubuntu, Lubuntu(If
+you need something more lightweight or running Ubuntu is slow for you), or a 
+linux distro of your choice inside a virtual machine.
 
 If your machine cannot deal with the amount of overhead the above requires, try 
-out cygwin.
+out cygwin which runs natively or look into booting from an Ubuntu or other 
+Linux distribution's livecd (Won't save), or even better look into installing it 
+alongside Windows.
 
 If you wish to compile native Windows programs using your source code, I 
 recommend TDM-GCC found here http://sourceforge.net/projects/tdm-gcc/?source=dlp 

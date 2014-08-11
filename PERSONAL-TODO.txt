@@ -13,3 +13,7 @@ yet to be checked.
 
 80-Column rule should be abided by assuming width 8 tabs? But you're using 4. 
 Many would not abide by 80 column rule if so. ? Be sure to decide before release
+
+It seems that testwords.c is about removing the trailing newline scanf leaves 
+behind. Look further into this and modify your comment(Wherever it is) about 
+such

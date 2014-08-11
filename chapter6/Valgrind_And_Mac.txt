@@ -1,6 +1,6 @@
 As of writing(August 5th, 2014) Valgrind does not support newer versions of Mac
-OS X. As I've said, this may be outdated by the time you read this so ALWAYS
-check http://valgrind.org first.
+OS X (>=10.8). As I've said, this may be outdated by the time you read this so 
+ALWAYS check http://valgrind.org first.
 There is an experimental valgrind version which instructions to install and use
 can be found here:
 http://calvinx.com/2014/05/04/valgrind-on-mac-os-x-10-9-mavericks/

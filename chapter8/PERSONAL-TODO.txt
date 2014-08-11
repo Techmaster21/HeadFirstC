@@ -1,0 +1,5 @@
+Get libl.a from an older Mac OS X SDK (By installing an older Xcode version) so 
+that it (hopefully) matches the one in the book
+
+
+and of course check nm and ar on Windows and Mac
