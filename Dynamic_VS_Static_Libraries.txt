@@ -1,0 +1,4 @@
+Example book gives about localization for a use for dynamic libs? Is it really 
+useful in that capacity?
+Code change is certainly a valid argument but you'd still have to manage 50 
+different libraries. Is there a better way?

@@ -13,7 +13,18 @@ yet to be checked.
 
 80-Column rule should be abided by assuming width 8 tabs? But you're using 4. 
 Many would not abide by 80 column rule if so. ? Be sure to decide before release
+Convert all tabs to 4 spaces for this reason? Note in Tabs*.txt
 
 It seems that testwords.c is about removing the trailing newline scanf leaves 
 behind. Look further into this and modify your comment(Wherever it is) about 
 such
+
+chapter8 will need documentation + file and concept redo/major 
+improvements, did while not in the best of shape.
+Just completely rethink and redo the thing. It's all messed up.
+
+find first time book started using -o with gcc -c and note it is not necessary.
+
+Further research into Dynamic libraries vs static libraries and why one is 
+better than the other in specific situations
+And of course, pass this knowledge onto the reader
