@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "my_header_files/encrypt.h"
-#include "my_header_files/checksum.h"
+#include "/my_header_files/encrypt.h"
+#include "/my_header_files/checksum.h"
 
 int main()
 {

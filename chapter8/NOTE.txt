@@ -1,0 +1,30 @@
+In this chapter, in order to follow the instructions in the book, it is 
+imperative that you have access to administrative rights on your system. As this 
+is not guaranteed, I have worked on this chapter based on the assumption you do 
+not, and will attempt to offer advice on how to proceed if you do not have such 
+administrative rights. Even if you do have administrative rights, it may help 
+to read this to know why I arranged or changed things the way I did.
+
+Also note that you will have to recompile the encrypt.c and checksum.c into 
+object files quite a few times (or copy them from the previous pages), as I 
+cannot provide them for you.
+
+-If you can do what the book asks, do. It makes it much easier. If you can't, 
+read on:
+
+General rule: Wherever it says '/' in front of a folder name, replace it with 
+'./' to mean something in the "current directory"
+Wherever I say to replace it with './' you can just remove the './' and it will 
+work fine, it's just more clear to specify './'
+
+Exceptions noted below:
+
+page356
+--Way 1 simply isn't possible without administrative privileges
+
+page374-377
+-page375
+--It should be -I/includes for root directory folder "includes" same for -L/libs
+Though the provided syntax seems to work if the folder is in the local 
+directory, I recommend against it as it really isn't correct on Unix-like
+systems.

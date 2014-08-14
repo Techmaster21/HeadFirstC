@@ -1,5 +1,0 @@
-Use -Imy_header_files instead of -I/my_header_files and -Imy_object_files 
-instead of -I/my_object_files
-
-Also the gcc command on this page is meant to be all one line like
-gcc -Imy_header_files testcode.c my_object_files/encrypt.o my_object_files/checksum.o -o test_code

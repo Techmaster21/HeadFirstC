@@ -1,3 +1,0 @@
-Use -L./ or -L. if the library resides in the current directory
-
-And remember you need to use the -I option in this case!

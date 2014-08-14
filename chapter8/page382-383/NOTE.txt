@@ -1,0 +1,17 @@
+gcc -c -fPIC -I./includes hfcal.c -o hfcal.o
+gcc -shared hfcal.o -o ./libs/<whatever_it_should_be_called_for_your_os>
+gcc treadmill.c -I./includes -L./libs -lhfcal -o treadmill
+
+Be sure to set your path to point to ./libs for your OS then run
+
+./treadmill
+
+Notice it is giving American readouts.
+Now run:
+
+gcc -c -fPIC -I./includes hfcal_UK.c -o hfcal.o
+gcc -shared hfcal.o -o ./libs/<whatever_you_used_before>
+./treadmill
+
+Notice it is now giving English readouts, without ever having to recompile the 
+treadmill application!

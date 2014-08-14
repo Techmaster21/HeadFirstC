@@ -1,2 +1,0 @@
-Got the correct libl.a from Mac OSX 10.5 SDK but nm says "Format not recognized" 
-On my linux system. Why?
