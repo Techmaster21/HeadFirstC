@@ -1,0 +1,42 @@
+--Page 405
+The exec functions are variadic functions. However, unlike the variadic function 
+we made earlier in the book, we do not tell the exec functions how many 
+arguments we are going to pass it and it has no way of figuring it out. Thus, we 
+must pass it a NULL pointer. Unlike shown in the book, we are supposed to cast 
+NULL to a char * when we pass it. This is because it expects const char * as 
+arguments and could possibly be confused if we pass it just regular old NULL 
+(Which is usually a void *, but on some (mostly obscure) systems can even be an 
+int). In practice, it seems to not matter, but I would recommend erring on the 
+safe side. It certainly won't hurt.
+
+--Page 406
+In this usage, vector is just a fancy name for a one-dimensional array. If 
+you'll remember back to when we used argv[] to get command line arguments, argv 
+actually stands for argument vector, because it is an array of pointers to 
+characters.
+
+Some systems may have functions like execvpe or execlpe, which are just execvp 
+and execlp that also accept an array of environment variables at the end. 
+OSX even has a execvP, in which you specify the path for the function to search 
+in. However, only execl, execlp, execle, execv, execvp, and execve are POSIX
+defined so there's no guarantee of execvpe, execlpe, or execvP being available 
+on your system.
+
+For the exec functions that include environment variables, the way they work is
+that there is a variable included in glibc which, in order to use for yourself, 
+must be declared in your program like so "extern char **environ"
+This variable copies the current environment (Which you can see by typing "env" 
+on Linux or Mac OSX) and is what holds the environment variables you define. 
+This is important. The user's environment is NOT actually modified. But it 
+makes whatever program you decide to call think that it was, including (if you 
+use setenv or the like), your own.
+In fact, even if you use a call like system("export <VAR>=<VALUE>"), it still 
+won't semi-permanently (Until system restart) modify the environment, even 
+though if the user did this, it would. It has to do with the program being a 
+child process of the shell and other intricasies I really don't want to get 
+into. There are ways to permanently and semi-perminantly modify the shell env 
+variables, but that's partially system dependent and not something I want to get 
+into right now. Feel free to do some research on it though. If you need help, 
+just try asking a question on stackoverflow.com
+
+Not sure how any of the above 2 paragraphs work on Windows. Hint Hint.

@@ -31,3 +31,18 @@ prominently Windows.
 
 Got the correct libl.a from Mac OSX 10.5 SDK but nm says "Format not recognized" 
 On my linux system. Why?
+
+find where size_t first used and note headers that it is included in, same with 
+NULL and anything else not language defined
+
+why gcc need library includes after source code? its usually pretty chill about 
+placement
+
+for further investigation: Does passing environment variables to a process 
+create any lasting effect or are the environment variables only visible to the 
+process then deleted when it ends? Or are they visible to all processes but 
+deleted when the one that called the thing with the environment variable ends?
+Do they set or add to an existing environment variable?
+
+check oggswing.c (chapter4) and at least try to make it work on other OS and/or 
+provide documentation to make it work

@@ -1,0 +1,18 @@
+Tutorials regarding OpenCV for C are sparse. The links provided in the books no 
+longer work as of writing(08/14/14) presumably because Willow Garage has shut 
+down. 
+Documentation on the functions provided by OpenCV can be found here: 
+docs.opencv.org
+And I also found this to be useful:
+www.cs.iit.edu/~agam/cs512/lect-notes/opencv-intro/opencv-intro.html
+
+At the least you will need to #include <opencv/cv.h> and <opencv/highgui.h>
+and requisite compilation flags can be provided by 
+pkg-config --cflags --libs opencv
+
+Using the Farneback function suggested, I was unable to produce any meaningful 
+output, but perhaps you will have more luck.
+If not, I would look at blog.cedric.wx/opencv-simple-motion-detection
+I did not personally attempt to use this method, but it seems simpler and more 
+promising, though you will likely have to convert the functions from C++ API to 
+C API (If that is even possible)

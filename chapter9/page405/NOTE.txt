@@ -1,0 +1,2 @@
+A brief set of programs to demonstrate that exec replaces the running process.
+run make then pass_the_baton
