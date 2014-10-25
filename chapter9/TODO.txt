@@ -3,3 +3,16 @@ examine man execve and create documentation explaining usage and whatnot stuff
 make sure to clean up NOTES.txt and add appropriate OS specific documentation.
 
 examine validity of cygwin statement on page 407
+
+Casting NULL to char * is recommended on Linux, but BSD man makes no mention of 
+it. Is it common to all systems? Linux man states it is because it is a variadic 
+function. Research required.
+
+test page410 on Windows + with flawed perms on linux
+also demonstrate more sound reasoning?
+
+reread stuff on page414-415 because you changed the code a bit because there was 
+a mismatched brace and an uneccesary extra fprintf, but you should be certain
+
+Will need to setup stuff for RSS pages418-whatever so that it works out of the 
+box(Maybe?)

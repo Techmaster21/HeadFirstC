@@ -4,9 +4,6 @@
                               |                                              |
                               |                 BANK OF-                     |
                               |                                              |
-                              |                 HEAD FIRST-                  |
-                              |                                              |
-                              +--------------------+----+--------------------+
                                                    |    |
                      +-----------------------------+----+-------------------------------+
                      |    Safer than keeping your cash at home. Probably.-              |
@@ -21,170 +18,12 @@
                                                    |    |
                                                    |    |
                                                    +----+
- execl("/home/flynn/clu", "/home/flynn/clu", "paranoids", "contract", NULL)
- execlp("clu", "clu", "paranoids", "contract", NULL)
- execle("/home/flynn/clu", "/home/flynn/clu", "paranoids", "contract", NULL, env_vars)
- execv("/home/flynn/clu", my_args);
- execvp("clu", my_args)
- #include <stdio.h>
- #include <stdlib.h>
- int main(int argc, char* argv[])
- {
-   printf("Diners: %s\n", argv[1]);
-   printf("Juice: %s\n", getenv("JUICE"));
-   return 0;
- }
- char* my_env[] = {"JUICE=peach and apple", NULL};
- execle("diner_info", "diner_info", "4", NULL, my_env);
- > ./my_exec_program
- Diners: 4
- Juice: peach and apple
- >
  execle("diner_info", "diner_info", "4", NULL, my_env);
  puts("Dude - the diner_info code must be busted");
  * <s>Release an acoustic album</s>
  * Tidy up as much as you can
  * Set the errno variable to an error value
  * Return -1
- |------------+---------------------------|
- | EPERM=1    | Operation not permitted   |
- | ENOENT=2   | No such file or directory |
- | ESRCH=3    | No such process           |
- | EMULLET=81 | Bad haircut               |
- | ...        |                           |
- |------------+---------------------------|
- puts(strerror(errno));
- No such file or directory
- #include <stdio.h>
- _____________________
- _____________________
- _____________________
- int main()
- {
-   if (________________________________________________________)
-     if (execlp(_________________________________________________) {
-       fprintf(stderr, "Cannot run ipconfig: %s", __________________);
-       return 1;
-     }
-   return 0;
- }
- #include <stdio.h>
- #include <unistd.h>
- #include <errno.h>
- #include <string.h>
- int main()
- {
-   if (execl("/sbin/ifconfig", "/sbin/ifconfig", NULL) == -1)
-     if (execlp("ipconfig", "ipconfig", NULL) == -1) {
-       fprintf(stderr, "Cannot run ipconfig: %s", strerror(errno));
-       return 1;
-     }
-   return 0;
- }
- Q: Isn't system() just easier to use than exec()?
- A: Yes. But because the operating system needs to interpret the string you pass to system(), it can be a buggy. Particularly if you create the command string dynamically.
- Q: Why are there so many exec() functions?
- A: Over time people wanted to create processes in different ways. The different versions of exec() were created because people need them.
- Q: Do I always have to check the return value of a system call? Doesn't it make the program really long?
- A: If you make system calls and don't check for errors, your code will be shorter. But it will probably also have more bugs. It is better to think about errors when you first write code. It will make it '''much''' easier to catch bugs later on.
- Q: If I run an exec() command, can I do anything afterwards?
- A: No. The exec() command will change the process so that it runs the new program instead of your program. That means the program containing the exec() call will stop as soon as it runs the exec() function.
- #include <stdio.h>
- #include <stdlib.h>
- int main(int argc, char* argv[])
- {
-   char* w = getenv("EXTRA");
-   if (!w)
-     w = getenv("FOOD");
-   if (!w)
-     w = argv[argc - 1];
-   char* c = getenv("EXTRA");
-   if (!c)
-     c = argv[argc - 1];
-   printf("%s with %s\n", c, w);
-   return 0;
- }
-  int main(int argc, char* argv[]){
-      _____________________________________________________________
-      _____________________________________________________________
-      _____________________________________________________________
-      _____________________________________________________________
-      fprintf(stderr,"Can't create order: %s\n", strerror(errno));
-      return 1;
-    }
-    return 0;
-  }
-  char* my_env[] = {"FOOD=coffee", NULL};
-  if(execle("./coffee", "./coffee", "donuts", NULL, my_env) == -1){
-    fprintf(stderr,"Can't run process 0: %s\n", strerror(errno));
-    return 1;
-  }
-  char* my_env[] = {"FOOD=donuts", NULL};
-  if(execle("./coffee", "./coffee", "cream", NULL, my_env) == -1){
-    fprintf(stderr,"Can't run process 0: %s\n", strerror(errno));
-    return 1;
-  }
-  if(execl("./coffee", "coffee", NULL) == -1){
-    fprintf(stderr,"Can't run process 0: %s\n", strerror(errno));
-    return 1;
-  }
-  char* my_env[] = {"FOOD=donuts", NULL};
-  if(execle("./coffee", "coffee", NULL, my_env) == -1){
-    fprintf(stderr,"Can't run process 0: %s\n", strerror(errno));
-    return 1;
-  }
- coffee with donuts
- cream with donuts
- donuts with coffee
- coffee with coffee
- #include <stdio.h>
- #include <stdlib.h>
- int main(int argc, char* argv[])
- {
-   char* w = getenv("EXTRA");
-   if (!w)
-     w = getenv("FOOD");
-   if (!w)
-     w = argv[argc - 1];
-   char* c = getenv("EXTRA");
-   if (!c)
-     c = argv[argc - 1];
-   printf("%s with %s\n", c, w);
-   return 0;
- }
-  int main(int argc, char* argv[]){
-      _____________________________________________________________
-      _____________________________________________________________
-      _____________________________________________________________
-      _____________________________________________________________
-      fprintf(stderr,"Can't create order: %s\n", strerror(errno));
-      return 1;
-    }
-    return 0;
-  }
-  char* my_env[] = {"FOOD=coffee", NULL};
-  if(execle("./coffee", "./coffee", "donuts", NULL, my_env) == -1){
-    fprintf(stderr,"Can't run process 0: %s\n", strerror(errno));
-    return 1;
-  }
- donuts with coffee
-  char* my_env[] = {"FOOD=donuts", NULL};
-  if(execle("./coffee", "./coffee", "cream", NULL, my_env) == -1){
-    fprintf(stderr,"Can't run process 0: %s\n", strerror(errno));
-    return 1;
-  }
- cream with donuts
-  if(execl("./coffee", "coffee", NULL) == -1){
-    fprintf(stderr,"Can't run process 0: %s\n", strerror(errno));
-    return 1;
-  }
- coffee with coffee
-  char* my_env[] = {"FOOD=donuts", NULL};
-  if(execle("./coffee", "coffee", NULL, my_env) == -1){
-    fprintf(stderr,"Can't run process 0: %s\n", strerror(errno));
-    return 1;
-  }
- coffee with donuts
  > export RSS_FEED=http://www.cnn.com/rss/celebs.xml
  > python rssgossip.py 'pajama death'
  Pajama Death launch own range of kitchen appliances.
