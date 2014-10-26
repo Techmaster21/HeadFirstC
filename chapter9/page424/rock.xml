@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Rock News</title>
+  <link>http://www.rollingstones.com/rock.xml</link>
+  <description>All you'd want to know about rocks</description>
+  <item>
+    <title>Photos from the surprise Pajama Death concert.</title>
+    <link>http://www.notareallink.com/stillnotarealstory.html</link>
+  </item>
+  <item>
+    <title>Official Pajama Death pajamas go on sale.</title>
+    <link>http://www.notareallink.com/seriouslynotarealstory.html</link>
+  </item>
+</channel>                                  
+
+</rss> 

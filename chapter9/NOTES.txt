@@ -39,4 +39,5 @@ variables, but that's partially system dependent and not something I want to get
 into right now. Feel free to do some research on it though. If you need help, 
 just try asking a question on stackoverflow.com
 
-Not sure how any of the above 2 paragraphs work on Windows. Hint Hint.
+Not sure how any of the above 2 paragraphs work on Windows. That will be left as 
+an exercise to the reader.

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Celebrity News</title>
+  <link>http://www.cnn.com/rss/celebs.xml</link>
+  <description>All you'd want to know about celebs</description>
+  <item>
+    <title>Pajama Death ex-drummer tells all.</title>
+    <link>http://www.notareallink.com/notarealstory.html</link>
+  </item>
+  <item>
+    <title>No one will ever see me because I am invisible! Well, if you use the 
+           search script at least</title>
+    <link>http://www.notareallink.com/alsonotarealstory.html</link>
+  </item>
+  <item>
+    <title>New Pajama Death album due next month.</title>
+    <link>http://www.notareallink.com/trulynotarealstory.html</link>
+  </item>
+</channel>                                  
+
+</rss> 
